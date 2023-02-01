@@ -86,9 +86,9 @@ public class AirCon {
     public void setCurrTemp(int n){
         currTemp += n;
     }
-        public int getCurrTemp(){
+    public int getCurrTemp(){
         return currTemp;
-    }
+}
     public int getSetTemp(){ return setTemp;
 
     }

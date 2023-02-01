@@ -7,15 +7,18 @@ import java.util.Scanner;
 // 접근제한자, 반환타입, 메소드이름(매개변수목록) {구현부 ; return;}
 public class ClassMethod {
     public static void main(String[] args) {
-        Sample sample = new Sample();//클래스내에 생성자가 없으면 기본생성자가 호출됨.
+        Sample sample = new Sample(); // 생성자 호출 시, 전달하는 매개변수가 없음
         Scanner sc = new Scanner(System.in);
         System.out.print("정수값 입력 : ");
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
         int rst = sample.sum(n1, n2); //
                 System.out.println(rst);
-        sample.say();
+        sample.say(); // say() 메소드 호출을 위해서 클래스를 객체로 만들고 객체의 메소드로 접근
         System.out.println(sample.sayStr());
+
+        int rst2 = sample.sum(1,2,3,4,5);
+        System.out.println(rst2);
 
     }
 }

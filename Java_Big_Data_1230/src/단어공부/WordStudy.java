@@ -15,10 +15,19 @@ import java.util.Scanner;
 // 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
 public class WordStudy {
     public static void main(String[] args) {
+        int[] alphabet = new int [26]; // 알파벳 개수 만들기
+
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
-        int temp = 0;
-        int cnt = 0;
+        int max = 0;
+        int result = 0;
+//
+//        for (int i = 0; i < input.length(); i++) {
+//            if(input.charAt(i) >= 'a')
+//
+//
+
+
 
         char[] inputArr = new char[input.length()];
 
@@ -26,11 +35,19 @@ public class WordStudy {
             inputArr[i] = input.charAt(i);
             for(int j = 0; j <input.length(); j++){
 
-                if (inputArr[i] == inputArr[j]){
-                    cnt++;
+                if (inputArr[i] == inputArr[j])
+                    inputArr[i]++;
                 }
+            }
+        for(int i = 0; i < input.length(); i++) {
+            if(inputArr[i] == max) result = '?';
+            else if (inputArr[i] > max) {
+                max = inputArr[i];
+                result = (char) (max);
             }
 
         }
+        System.out.println(result);
+
     }
 }

@@ -1,4 +1,4 @@
-package 진법계산;
+package 진수계산;
 //## 문제
 //8진수가 주어졌을 때, 2진수로 변환하는 프로그램을 작성하시오.
 
@@ -14,7 +14,6 @@ package 진법계산;
 //## 예제 출력 1
 //11001100
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Jinbub {
